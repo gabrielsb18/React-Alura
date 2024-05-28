@@ -1,12 +1,18 @@
 import "./index.css";
 
-const inputText = () => {
+const inputText = (props) => {
+
+    //Criando uma concatenação com props
+    const placeHolderModificada = `${props.placeholder}...`
+
     return (
         <div className = "envolve__input"> 
-            <label>Nome</label>
+            <label>
+                {props.label}
+            </label>
             <input
                 type='text'
-                placeholder="Digite seu nome"
+                placeholder={placeHolderModificada}
             />
         </div>
 
